@@ -22,6 +22,7 @@ class Game:
 		self.max_depth = d1
 		self.initialize_game()
 		# Variables used for statistics
+		self.total_moves = 0
 		self.e1_heuristic_eval_times = []
 		self.e2_heuristic_eval_times = []
 		self.state_count = 0
@@ -348,10 +349,11 @@ class Game:
 		self.logger.write(f'Player 2: {player_w} d={self.d2} a={algo} e1\n\n')
 		while True:
 			self.draw_board()
+			self.total_moves += 1
 			self.state_count = 0
 			self.depth_state_count = dict.fromkeys(self.depth_state_count, 0)
 			if self.check_end():
-				return
+				break
 			self.start_time = time.time()
 			if algo == self.MINIMAX:
 				if self.player_turn == 'b':
@@ -391,7 +393,7 @@ class Game:
 				total += level*self.depth_state_count[level]
 			avg_depth = round(total/self.state_count, 4)
 			self.logger.write(f'iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'v   \n')
+			self.logger.write(f'v   Average recursion depth: \n')
 			if self.heuristic == "e1":
 				self.e1_heuristic_eval_times.append(round(end - self.start_time, 7))
 			else:
@@ -399,27 +401,49 @@ class Game:
 			self.current_state[x][y] = self.player_turn
 			self.switch_player()
 		# End of game logging
+		e1_total = 0
+		if self.e1_game_state_count > 0:
+			for level in self.e1_game_depth_state_count:
+				e1_total += level*self.e1_game_depth_state_count[level]
+			e1_avg_depth = round(e1_total/self.e1_game_state_count, 4)
+		e2_total = 0
+		if self.e2_game_state_count > 0:
+			for level in self.e2_game_depth_state_count:
+				e2_total += level*self.e2_game_depth_state_count[level]
+			e2_avg_depth = round(e2_total/self.e2_game_state_count, 4)
 		if p1_heuristic != p2_heuristic:
-			self.logger.write(f'Heuristic e1:')
-			self.logger.write(f'6(b)i   Evaluation time: {round(sum(e1_heuristic_eval_times)/len(e1_heuristic_eval_times), 7)}s\n')
-			self.logger.write(f'6(b)ii  Heuristic evaluations: {self.state_count}\n')
-			self.logger.write(f'6(b)iii Evaluations by depth: {self.depth_state_count}\n')
-			self.logger.write(f'6(b)iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'6(b)v   \n')
-			self.logger.write(f'Heuristic e2:')
-			self.logger.write(f'6(b)i   Evaluation time: {sum(e2_heuristic_eval_times)/len(e2_heuristic_eval_times), 7)}s\n')
-			self.logger.write(f'6(b)ii  Heuristic evaluations: {self.state_count}\n')
-			self.logger.write(f'6(b)iii Evaluations by depth: {self.depth_state_count}\n')
-			self.logger.write(f'6(b)iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'6(b)v   \n')
+			self.logger.write(f'Heuristic e1:\n')
+			self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e1_heuristic_eval_times)/len(self.e1_heuristic_eval_times), 7)}s\n')
+			self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e1_game_state_count}\n')
+			self.logger.write(f'6(b)iii Evaluations by depth: {self.e1_game_depth_state_count}\n')
+			self.logger.write(f'6(b)iv  Average evaluation depth: {e1_avg_depth}\n')
+			self.logger.write(f'6(b)v   Average recursion depth: \n')
+			self.logger.write(f'Heuristic e2:\n')
+			self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e2_heuristic_eval_times)/len(self.e2_heuristic_eval_times), 7)}s\n')
+			self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e2_game_state_count}\n')
+			self.logger.write(f'6(b)iii Evaluations by depth: {self.e2_game_depth_state_count}\n')
+			self.logger.write(f'6(b)iv  Average evaluation depth: {e2_avg_depth}\n')
+			self.logger.write(f'6(b)v   Average recursion depth: \n')
+			self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 		else:
-			self.logger.write(f'Heuristic {p1_heuristic}:')
-			self.logger.write(f'6(b)i   Evaluation time: {round(end - self.start_time, 7)}s\n')
-			self.logger.write(f'6(b)ii  Heuristic evaluations: {self.state_count}\n')
-			self.logger.write(f'6(b)iii Evaluations by depth: {self.depth_state_count}\n')
-			self.logger.write(f'6(b)iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'6(b)v   \n')
+			if p1_heuristic == "e1":
+				self.logger.write(f'Heuristic e1:\n')
+				self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e1_heuristic_eval_times)/len(self.e1_heuristic_eval_times), 7)}s\n')
+				self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e1_game_state_count}\n')
+				self.logger.write(f'6(b)iii Evaluations by depth: {self.e1_game_depth_state_count}\n')
+				self.logger.write(f'6(b)iv  Average evaluation depth: {e1_avg_depth}\n')
+				self.logger.write(f'6(b)v   Average recursion depth: \n')
+				self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
+			else:
+				self.logger.write(f'Heuristic e2:\n')
+				self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e2_heuristic_eval_times)/len(self.e2_heuristic_eval_times), 7)}s\n')
+				self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e2_game_state_count}\n')
+				self.logger.write(f'6(b)iii Evaluations by depth: {self.e2_game_depth_state_count}\n')
+				self.logger.write(f'6(b)iv  Average evaluation depth: {e2_avg_depth}\n')
+				self.logger.write(f'6(b)v   Average recursion depth: \n')
+				self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 		self.logger.close()
+		return
 
 def userInput():
     while True:
@@ -474,7 +498,7 @@ def main():
 	# n, b, blocs, s, d1, d2, t, a, m = userInput()
 	g = Game(recommend=True)
 	a = True
-	m = 'H-AI'
+	m = 'AI-AI'
 	m = m.split('-')
 	p1_h = "e2"
 	p2_h = "e2"
