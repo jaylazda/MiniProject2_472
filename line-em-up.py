@@ -298,8 +298,8 @@ class Game:
 	
 	# Applies a mask of size s and goes through all rows, columns and diagonals and evaluates the heuristic
 	# Will sum up every permutation of the mask across the board and that will result in the final h()
-	# If only b and . are present in the mask ie ['b','b','.','b'] then the # of b's is added to h() (ex: 3)
-	# If only w and . are present in the mask ie ['w','.','w','.'] then the # of w's is subtracted from h() (ex: -2)
+	# If only b and . are present in the mask ie ['b','b','.','b'] then the # of b's is subtracted from h() (ex: -3)
+	# If only w and . are present in the mask ie ['w','.','w','.'] then the # of w's is added to h() (ex: 2)
 	# If a bloc x is detected in the mask, or there is a mix of w and b in the mask, then nothing is added to h()
 	# If a win state is detected (mask with all b's), h() is set to 10000 and the function returns 
 	# If a lose state is detected (mask with all w's), h() is set to -10000 and the function returns
@@ -595,16 +595,15 @@ def experiments():
 			
 
 def main():
-	# n, b, blocs, s, d1, d2, t, a, m = userInput()
-	# g = Game(recommend=True)
-	# a1 = True
-	# a2 = True
-	# m = 'H-AI'
-	# m = m.split('-')
-	# p1_h = "e2"
-	# p2_h = "e2"
-	# g.play(p1_algo=a1, p2_algo=a2, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
-	experiments()
+	n, b, blocs, s, d1, d2, t, a, m = userInput()
+	g = Game(n=n, b=b, blocs=blocs, s=s, d1=d1, d2=d2, t=t, recommend=True)
+	a1 = True
+	a2 = True
+	m = m.split('-')
+	p1_h = "e2"
+	p2_h = "e2"
+	g.play(p1_algo=a1, p2_algo=a2, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
+	# experiments() # Uncomment to run the tests
 	
 if __name__ == "__main__":
 	main()
