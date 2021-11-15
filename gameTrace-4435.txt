@@ -1,0 +1,2500 @@
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.998153s
+ii  Heuristic evaluations: 328856
+iii Evaluations by depth: {1: 5, 2: 8, 3: 0, 4: 3, 5: 8, 6: 328832}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 3.6737
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.998884s
+ii  Heuristic evaluations: 98116
+iii Evaluations by depth: {1: 7, 2: 3, 3: 2, 4: 5, 5: 5, 6: 98094}
+iv  Average evaluation depth: 5.9993
+v   Average recursion depth: 2.6724
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.0911262s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1837611s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.151654s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0441201s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0090909s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.812506s
+6(b)ii  Total heuristic evaluations: 441824
+6(b)iii Evaluations by depth: {1: 5, 2: 8, 3: 0, 4: 3, 5: 8, 6: 441800}
+6(b)iv  Average evaluation depth: 5.9998
+6(b)v   Average recursion depth: 4.2575
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0755884s
+6(b)ii  Total heuristic evaluations: 119740
+6(b)iii Evaluations by depth: {1: 7, 2: 3, 3: 2, 4: 5, 5: 5, 6: 119718}
+6(b)iv  Average evaluation depth: 5.9994
+6(b)v   Average recursion depth: 3.8355
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981899s
+ii  Heuristic evaluations: 359629
+iii Evaluations by depth: {1: 5, 2: 1, 3: 7, 4: 2, 5: 3, 6: 359611}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 3.8701
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9988098s
+ii  Heuristic evaluations: 106185
+iii Evaluations by depth: {1: 7, 2: 0, 3: 3, 4: 1, 5: 4, 6: 106170}
+iv  Average evaluation depth: 5.9995
+v   Average recursion depth: 2.7785
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.1119921s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.185744s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1517851s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0457182s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.008919s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.8177215s
+6(b)ii  Total heuristic evaluations: 472597
+6(b)iii Evaluations by depth: {1: 5, 2: 1, 3: 7, 4: 2, 5: 3, 6: 472579}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3066
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0767573s
+6(b)ii  Total heuristic evaluations: 127809
+6(b)iii Evaluations by depth: {1: 7, 2: 0, 3: 3, 4: 1, 5: 4, 6: 127794}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 3.8709
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981377s
+ii  Heuristic evaluations: 358636
+iii Evaluations by depth: {1: 5, 2: 1, 3: 9, 4: 3, 5: 1, 6: 358617}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 3.8654
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9986329s
+ii  Heuristic evaluations: 106319
+iii Evaluations by depth: {1: 7, 2: 0, 3: 2, 4: 6, 5: 2, 6: 106302}
+iv  Average evaluation depth: 5.9995
+v   Average recursion depth: 2.7803
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.116478s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1757457s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.153832s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0443981s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0097501s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.8195495s
+6(b)ii  Total heuristic evaluations: 471604
+6(b)iii Evaluations by depth: {1: 5, 2: 1, 3: 9, 4: 3, 5: 1, 6: 471585}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3054
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0729256s
+6(b)ii  Total heuristic evaluations: 127943
+6(b)iii Evaluations by depth: {1: 7, 2: 0, 3: 2, 4: 6, 5: 2, 6: 127926}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 3.8715
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981339s
+ii  Heuristic evaluations: 359994
+iii Evaluations by depth: {1: 5, 2: 1, 3: 6, 4: 4, 5: 3, 6: 359975}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 3.872
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9988439s
+ii  Heuristic evaluations: 106273
+iii Evaluations by depth: {1: 7, 2: 0, 3: 2, 4: 7, 5: 3, 6: 106254}
+iv  Average evaluation depth: 5.9995
+v   Average recursion depth: 2.78
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.085104s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1748149s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1524322s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0452018s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0092871s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.8112393s
+6(b)ii  Total heuristic evaluations: 472962
+6(b)iii Evaluations by depth: {1: 5, 2: 1, 3: 6, 4: 4, 5: 3, 6: 472943}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3071
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0729535s
+6(b)ii  Total heuristic evaluations: 127897
+6(b)iii Evaluations by depth: {1: 7, 2: 0, 3: 2, 4: 7, 5: 3, 6: 127878}
+6(b)iv  Average evaluation depth: 5.9995
+6(b)v   Average recursion depth: 3.8714
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981542s
+ii  Heuristic evaluations: 360542
+iii Evaluations by depth: {1: 5, 2: 1, 3: 5, 4: 3, 5: 0, 6: 360528}
+iv  Average evaluation depth: 5.9999
+v   Average recursion depth: 3.8745
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9987202s
+ii  Heuristic evaluations: 104954
+iii Evaluations by depth: {1: 7, 2: 0, 3: 6, 4: 7, 5: 0, 6: 104934}
+iv  Average evaluation depth: 5.9994
+v   Average recursion depth: 2.7679
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.6224251s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.123028s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1448691s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.041435s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0091913s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.9436599s
+6(b)ii  Total heuristic evaluations: 473510
+6(b)iii Evaluations by depth: {1: 5, 2: 1, 3: 5, 4: 3, 5: 0, 6: 473496}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3077
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0543944s
+6(b)ii  Total heuristic evaluations: 126578
+6(b)iii Evaluations by depth: {1: 7, 2: 0, 3: 6, 4: 7, 5: 0, 6: 126558}
+6(b)iv  Average evaluation depth: 5.9995
+6(b)v   Average recursion depth: 3.8674
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981339s
+ii  Heuristic evaluations: 383832
+iii Evaluations by depth: {1: 4, 2: 7, 3: 5, 4: 4, 5: 2, 6: 383810}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 4.1092
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9989388s
+ii  Heuristic evaluations: 104438
+iii Evaluations by depth: {1: 7, 2: 0, 3: 8, 4: 4, 5: 7, 6: 104412}
+iv  Average evaluation depth: 5.9993
+v   Average recursion depth: 2.7625
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 1.9823768s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 2.1611109s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.2178879s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0575671s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.013047s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.8028614s
+6(b)ii  Total heuristic evaluations: 496800
+6(b)iii Evaluations by depth: {1: 4, 2: 7, 3: 5, 4: 4, 5: 2, 6: 496778}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3664
+Heuristic e2:
+6(b)i   Average evaluation time: 2.4058723s
+6(b)ii  Total heuristic evaluations: 126062
+6(b)iii Evaluations by depth: {1: 7, 2: 0, 3: 8, 4: 4, 5: 7, 6: 126036}
+6(b)iv  Average evaluation depth: 5.9994
+6(b)v   Average recursion depth: 3.8655
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 5.0010729s
+ii  Heuristic evaluations: 232789
+iii Evaluations by depth: {1: 7, 2: 6, 3: 2, 4: 0, 5: 3, 6: 232771}
+iv  Average evaluation depth: 5.9997
+v   Average recursion depth: 2.8969
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.998795s
+ii  Heuristic evaluations: 95928
+iii Evaluations by depth: {1: 7, 2: 4, 3: 0, 4: 4, 5: 3, 6: 95910}
+iv  Average evaluation depth: 5.9994
+v   Average recursion depth: 2.6425
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 2.0547831s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1431808s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1554112s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.041342s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.010092s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.8053398s
+6(b)ii  Total heuristic evaluations: 345757
+6(b)iii Evaluations by depth: {1: 7, 2: 6, 3: 2, 4: 0, 5: 3, 6: 345739}
+6(b)iv  Average evaluation depth: 5.9998
+6(b)v   Average recursion depth: 4.0633
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0611059s
+6(b)ii  Total heuristic evaluations: 117552
+6(b)iii Evaluations by depth: {1: 7, 2: 4, 3: 0, 4: 4, 5: 3, 6: 117534}
+6(b)iv  Average evaluation depth: 5.9995
+6(b)v   Average recursion depth: 3.8255
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981298s
+ii  Heuristic evaluations: 376711
+iii Evaluations by depth: {1: 4, 2: 9, 3: 0, 4: 6, 5: 1, 6: 376691}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 4.0596
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.999054s
+ii  Heuristic evaluations: 112421
+iii Evaluations by depth: {1: 6, 2: 7, 3: 8, 4: 8, 5: 0, 6: 112392}
+iv  Average evaluation depth: 5.9991
+v   Average recursion depth: 2.9596
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 1.9731483s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1271839s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1451697s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.0417738s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0088539s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7813254s
+6(b)ii  Total heuristic evaluations: 489679
+6(b)iii Evaluations by depth: {1: 4, 2: 9, 3: 0, 4: 6, 5: 1, 6: 489659}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.354
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0560039s
+6(b)ii  Total heuristic evaluations: 134045
+6(b)iii Evaluations by depth: {1: 6, 2: 7, 3: 8, 4: 8, 5: 0, 6: 134016}
+6(b)iv  Average evaluation depth: 5.9993
+6(b)v   Average recursion depth: 3.9312
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981799s
+ii  Heuristic evaluations: 384046
+iii Evaluations by depth: {1: 4, 2: 7, 3: 5, 4: 0, 5: 3, 6: 384027}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 4.1098
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.9991837s
+ii  Heuristic evaluations: 113033
+iii Evaluations by depth: {1: 6, 2: 7, 3: 6, 4: 7, 5: 3, 6: 113004}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 2.9656
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 1.9725802s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1150479s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1479108s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.041862s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.010355s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7822565s
+6(b)ii  Total heuristic evaluations: 497014
+6(b)iii Evaluations by depth: {1: 4, 2: 7, 3: 5, 4: 0, 5: 3, 6: 496995}
+6(b)iv  Average evaluation depth: 5.9999
+6(b)v   Average recursion depth: 4.3665
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0520312s
+6(b)ii  Total heuristic evaluations: 134657
+6(b)iii Evaluations by depth: {1: 6, 2: 7, 3: 6, 4: 7, 5: 3, 6: 134628}
+6(b)iv  Average evaluation depth: 5.9993
+6(b)v   Average recursion depth: 3.9332
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9981492s
+ii  Heuristic evaluations: 382890
+iii Evaluations by depth: {1: 4, 2: 7, 3: 7, 4: 3, 5: 4, 6: 382865}
+iv  Average evaluation depth: 5.9998
+v   Average recursion depth: 4.1048
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 2, y = 1
+
+i   Evaluation time: 4.998929s
+ii  Heuristic evaluations: 111959
+iii Evaluations by depth: {1: 6, 2: 8, 3: 1, 4: 5, 5: 3, 6: 111936}
+iv  Average evaluation depth: 5.9993
+v   Average recursion depth: 2.9454
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 1.9724402s
+ii  Heuristic evaluations: 109740
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 109740}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8056
+  ABCD
+ +----
+0|x..x
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 1.1123161s
+ii  Heuristic evaluations: 21264
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 21264}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9246
+  ABCD
+ +----
+0|xw.x
+1|.bb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 0.1447821s
+ii  Heuristic evaluations: 3204
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 3204}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3119
+  ABCD
+ +----
+0|xwbx
+1|.bb.
+2|.w..
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.042038s
+ii  Heuristic evaluations: 360
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 360}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9095
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|.w..
+3|x..x
+
+Player b under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0093291s
+ii  Heuristic evaluations: 24
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 24}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.2389
+  ABCD
+ +----
+0|xwbx
+1|wbbb
+2|.w..
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7811752s
+6(b)ii  Total heuristic evaluations: 495858
+6(b)iii Evaluations by depth: {1: 4, 2: 7, 3: 7, 4: 3, 5: 4, 6: 495833}
+6(b)iv  Average evaluation depth: 5.9998
+6(b)v   Average recursion depth: 4.3653
+Heuristic e2:
+6(b)i   Average evaluation time: 2.0510944s
+6(b)ii  Total heuristic evaluations: 133583
+6(b)iii Evaluations by depth: {1: 6, 2: 8, 3: 1, 4: 5, 5: 3, 6: 133560}
+6(b)iv  Average evaluation depth: 5.9994
+6(b)v   Average recursion depth: 3.9265
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9989071s
+ii  Heuristic evaluations: 115984
+iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 1, 5: 2, 6: 115962}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9748
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.3968809s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.9304211s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.800735s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.4507201s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0616601s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0227158s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.753092s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.600691s
+6(b)ii  Total heuristic evaluations: 224644
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 1, 5: 2, 6: 224622}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1818
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9988821s
+ii  Heuristic evaluations: 115978
+iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 1, 5: 3, 6: 115955}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9748
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.3709462s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.888217s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.8043511s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.450783s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0615289s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0223098s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7456087s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.590048s
+6(b)ii  Total heuristic evaluations: 224638
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 1, 5: 3, 6: 224615}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1818
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.999016s
+ii  Heuristic evaluations: 116318
+iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 3, 5: 6, 6: 116291}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9767
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2548039s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.9005101s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.8029351s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.4522843s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0616601s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.022794s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7064664s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5936511s
+6(b)ii  Total heuristic evaluations: 224978
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 3, 5: 6, 6: 224951}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1823
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9991s
+ii  Heuristic evaluations: 116138
+iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 7, 5: 4, 6: 116109}
+iv  Average evaluation depth: 5.9991
+v   Average recursion depth: 1.9761
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.267694s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.9005399s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.7987609s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.4514239s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0630801s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.023047s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.709845s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5935277s
+6(b)ii  Total heuristic evaluations: 224798
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 7, 5: 4, 6: 224769}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1821
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9993341s
+ii  Heuristic evaluations: 116216
+iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 5, 5: 7, 6: 116186}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9764
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2426472s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.9002049s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.8070328s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.4533908s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.061223s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0222478s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7036343s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5937944s
+6(b)ii  Total heuristic evaluations: 224876
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 5, 5: 7, 6: 224846}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1822
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9988041s
+ii  Heuristic evaluations: 115493
+iii Evaluations by depth: {1: 9, 2: 9, 3: 2, 4: 1, 5: 0, 6: 115472}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9726
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2408929s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.900722s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.8015192s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.449708s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0615239s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0221612s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.701312s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5928488s
+6(b)ii  Total heuristic evaluations: 224153
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 2, 4: 1, 5: 0, 6: 224132}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1812
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.999125s
+ii  Heuristic evaluations: 116463
+iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 0, 5: 7, 6: 116438}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9772
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2386289s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.8769119s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.7999439s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.452913s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0635152s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0220892s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.700696s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5877598s
+6(b)ii  Total heuristic evaluations: 225123
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 0, 5: 7, 6: 225098}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1824
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9992859s
+ii  Heuristic evaluations: 115795
+iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 4, 5: 6, 6: 115766}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9743
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2410979s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.886755s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.8191259s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.448843s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0617349s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.021807s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7073196s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5891727s
+6(b)ii  Total heuristic evaluations: 224455
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 4, 5: 6, 6: 224426}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1817
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9993489s
+ii  Heuristic evaluations: 116276
+iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 4, 5: 5, 6: 116249}
+iv  Average evaluation depth: 5.9992
+v   Average recursion depth: 1.9765
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.241432s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.877233s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.799444s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.4499509s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0631852s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0229681s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.7013537s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.5873752s
+6(b)ii  Total heuristic evaluations: 224936
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 0, 4: 4, 5: 5, 6: 224909}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1822
+6(b)vi  Total moves: 8
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+
+Player 1: AI d=6 a=False e1
+Player 2: AI d=6 a=False e1
+
+  ABCD
+ +----
+0|x..x
+1|....
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 1
+
+i   Evaluation time: 4.9991422s
+ii  Heuristic evaluations: 115789
+iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 4, 5: 7, 6: 115759}
+iv  Average evaluation depth: 5.9991
+v   Average recursion depth: 1.9743
+  ABCD
+ +----
+0|x..x
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 0, y = 1
+
+i   Evaluation time: 4.2389848s
+ii  Heuristic evaluations: 289512
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 289512}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.9091
+  ABCD
+ +----
+0|xw.x
+1|.b..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 0, y = 2
+
+i   Evaluation time: 4.895159s
+ii  Heuristic evaluations: 102120
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 102120}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.8016
+  ABCD
+ +----
+0|xwbx
+1|.b..
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 0
+
+i   Evaluation time: 0.7954869s
+ii  Heuristic evaluations: 34704
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 34704}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 5.4021
+  ABCD
+ +----
+0|xwbx
+1|wb..
+2|....
+3|x..x
+
+Player b under AI control plays: x = 1, y = 2
+
+i   Evaluation time: 0.452843s
+ii  Heuristic evaluations: 6480
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6480}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.9952
+  ABCD
+ +----
+0|xwbx
+1|wbb.
+2|....
+3|x..x
+
+Player w under AI control plays: x = 1, y = 3
+
+i   Evaluation time: 0.0621781s
+ii  Heuristic evaluations: 960
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 960}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 4.3571
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|....
+3|x..x
+
+Player b under AI control plays: x = 2, y = 0
+
+i   Evaluation time: 0.0224159s
+ii  Heuristic evaluations: 60
+iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 60}
+iv  Average evaluation depth: 6.0
+v   Average recursion depth: 3.9556
+  ABCD
+ +----
+0|xwbx
+1|wbbw
+2|b...
+3|x..x
+
+The winner is black!
+Heuristic e1:
+6(b)i   Average evaluation time: 1.6988833s
+6(b)ii  Total heuristic evaluations: 325176
+6(b)iii Evaluations by depth: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 325176}
+6(b)iv  Average evaluation depth: 6.0
+6(b)v   Average recursion depth: 5.2228
+Heuristic e2:
+6(b)i   Average evaluation time: 2.59239s
+6(b)ii  Total heuristic evaluations: 224449
+6(b)iii Evaluations by depth: {1: 9, 2: 9, 3: 1, 4: 4, 5: 7, 6: 224419}
+6(b)iv  Average evaluation depth: 5.9996
+6(b)v   Average recursion depth: 4.1817
+6(b)vi  Total moves: 8

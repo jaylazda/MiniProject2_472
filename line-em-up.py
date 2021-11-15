@@ -45,14 +45,10 @@ class Game:
 	def initialize_game(self):
 		self.current_state = [ ['.'] * self.n for _ in range(self.n)]
 		self.current_state = np.array(self.current_state)
-		print(self.current_state)
 		# Add blocks
 		for bloc in self.blocs:
-			print(bloc[0])
-			print(bloc[1])
 			self.current_state[bloc[0]][bloc[1]] = 'x'
 		# Player with black piece always plays first
-		print(self.current_state)
 		self.player_turn = 'b'
 
 	def draw_board(self):
@@ -176,7 +172,7 @@ class Game:
 					time_elapsed = time.time() - self.start_time
 					if max:
 						self.current_state[i][j] = 'w'
-						if level == self.max_depth or time_elapsed >= self.t: # We are at the max depth or time is up, so evaluate the heuristic
+						if level == self.max_depth or time_elapsed >= self.t-0.002: # We are at the max depth or time is up, so evaluate the heuristic
 							if self.heuristic == "e1":
 								v = self.e1('w', level)
 							else:
@@ -191,7 +187,7 @@ class Game:
 							y = j
 					else:
 						self.current_state[i][j] = 'b'
-						if level == self.max_depth or time_elapsed >= self.t: # We are at the max depth, so evaluate the heuristic
+						if level == self.max_depth or time_elapsed >= self.t-0.002: # We are at the max depth, so evaluate the heuristic
 							if self.heuristic == "e1":
 								v = self.e1('b', level)
 							else:
@@ -235,7 +231,7 @@ class Game:
 					time_elapsed = time.time() - self.start_time
 					if max:
 						self.current_state[i][j] = 'w'
-						if level == self.max_depth or time_elapsed >= self.t: # We are at the max depth or time is up, so evaluate the heuristic
+						if level == self.max_depth or time_elapsed >= self.t-0.002: # We are at the max depth or time is up, so evaluate the heuristic
 							if self.heuristic == "e1":
 								v = self.e1('w', level)
 							else:
@@ -250,7 +246,7 @@ class Game:
 							y = j
 					else:
 						self.current_state[i][j] = 'b'
-						if level == self.d1 or time_elapsed >= self.t: # We are at the max depth or time is up, so evaluate the heuristic
+						if level == self.d1 or time_elapsed >= self.t-0.002: # We are at the max depth or time is up, so evaluate the heuristic
 							if self.heuristic == "e1":
 								v = self.e1('b',level)
 							else:
@@ -348,7 +344,7 @@ class Game:
 	# returns 2 lists, the first being a list of all the columns in the current_state
 	# and the second being a list of all diagonals of length greater than or equal to s in the current_state
 	def cols_and_diags(self):
-		cols = [i[0] for i in self.current_state]
+		cols = np.transpose(self.current_state).tolist()
 		diags = [self.current_state[::-1,:].diagonal(i) for i in range(-self.current_state.shape[0]+1,self.current_state.shape[1])]
 		diags.extend(self.current_state.diagonal(i) for i in range(self.current_state.shape[1]-1,-self.current_state.shape[0],-1))
 		diags = [n.tolist() for n in diags if len(n) >= self.s]
@@ -412,9 +408,11 @@ class Game:
 			total = 0
 			for level in self.depth_state_count:
 				total += level*self.depth_state_count[level]
-			avg_depth = round(total/self.state_count, 4)
+			avg_depth = 0
+			if self.state_count > 0:
+				avg_depth = round(total/self.state_count, 4)
 			self.logger.write(f'iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'v   Average recursion depth: {ard}\n')
+			self.logger.write(f'v   Average recursion depth: {round(ard,4)}\n')
 			if self.heuristic == "e1":
 				self.e1_heuristic_eval_times.append(round(end - self.start_time, 7))
 			else:
@@ -443,9 +441,9 @@ class Game:
 		e1_ard = 0
 		e2_ard = 0
 		if len(self.e1_ard_list) > 0:
-			e1_ard = sum(self.e1_ard_list) / len(self.e1_ard_list)
+			e1_ard = round(sum(self.e1_ard_list) / len(self.e1_ard_list), 4)
 		if len(self.e2_ard_list) > 0:
-			e2_ard = sum(self.e2_ard_list) / len(self.e2_ard_list)
+			e2_ard = round(sum(self.e2_ard_list) / len(self.e2_ard_list), 4)
 		if p1_heuristic != p2_heuristic:
 			self.logger.write(f'Heuristic e1:\n')
 			self.logger.write(f'6(b)i   Average evaluation time: {e1_h_avg}s\n')
@@ -478,7 +476,7 @@ class Game:
 				self.logger.write(f'6(b)v   Average recursion depth: {e2_ard}\n')
 				self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 		self.logger.close()
-		return (self.result, e1_h_avg, e2_h_avg, self.e1_game_state_count, self.e2_game_state_count, self.e1_game_depth_state_count, self.e2_game_depth_state_count, e1_avg_depth, e2_avg_depth)
+		return (self.result, e1_h_avg, e2_h_avg, self.e1_game_state_count, self.e2_game_state_count, self.e1_game_depth_state_count, self.e2_game_depth_state_count, e1_avg_depth, e2_avg_depth, e1_ard, e2_ard, self.total_moves)
 
 def userInput():
     while True:
@@ -529,36 +527,84 @@ def userInput():
             break
     return n, b, blocs, s, d1, d2, t, a, m
 
+def game_tests(n, b, s, t, blocs, d1, d2, a1, a2):
+	# Score board file
+	r = 10
+	score_board = open(f'scoreboard.txt', 'a')
+	stats = {'b': 0, 'w': 0, '.': 0, 'e1t': 0, 'e2t': 0, 'e1states': 0, 'e2states': 0, 'e1statedepth': {}, 'e2statedepth': {}, 'e1depth': 0, 'e2depth': 0, 'e1ard': 0, 'e2ard': 0}
+	for i in range(2):
+		if i == 0:
+			p1 = 'e1'
+			p2 = 'e2'
+		else:
+			p1 = 'e2'
+			p2 = 'e1'
+		for _ in range(r):
+			g = Game(n, b, s, blocs, d1, d2, t, False)
+			(res, e1_time, e2_time, e1_states, e2_states, e1_state_depth, e2_state_depth, e1_depth, e2_depth, e1_ard, e2_ard, moves) = g.play(a1, a2, 'AI', 'AI', p1, p2)
+			stats[res] += 1
+			stats['e1t'] += round(e1_time, 7)
+			stats['e2t'] += round(e2_time, 7)
+			stats['e1states'] += e1_states
+			stats['e2states'] += e2_states
+			for i in range(max(d1,d2)):
+				stats['e1statedepth'][i+1] = e1_state_depth[i+1]
+				stats['e2statedepth'][i+1] = e2_state_depth[i+1]
+			stats['e1depth'] += e1_depth
+			stats['e2depth'] += e2_depth
+			stats['e1ard'] += e1_ard
+			stats['e2ard'] += e2_ard
+			stats['moves'] = moves
+		for key in stats['e1statedepth']:
+			stats['e1statedepth'][key] /= 10
+		for key in stats['e2statedepth']:
+			stats['e2statedepth'][key] /= 10
+		score_board.write(f'n={n} b={b} s={s} t={t}\n\n')
+		score_board.write(f'Player 1: d={d1} a={a1}\n')
+		score_board.write(f'Player 2: d={d2} a={a2}\n\n')
+		score_board.write(f'{r} games\n')
+		score_board.write(f'Total wins for heuristic {p1}: {stats["b"]} ({100*stats["b"]/r}%)\n')
+		score_board.write(f'Total wins for heuristic {p2}: {stats["w"]} ({100*stats["w"]/r}%)\n\n')
+		score_board.write(f'Heuristic e1:\n')
+		score_board.write(f'i   Average evaluation time: {stats["e1t"]/r}s\n')
+		score_board.write(f'ii  Total heuristic evaluations: {stats["e1states"]/r}\n')
+		score_board.write(f'iii Evaluations by depth: {stats["e1statedepth"]}\n')
+		score_board.write(f'iv  Average evaluation depth: {stats["e1depth"]/r}\n')
+		score_board.write(f'v   Average recursion depth: {stats["e1ard"]/r}\n')
+		score_board.write(f'vi  Total moves: {stats["moves"]}\n\n')
+		score_board.write(f'Heuristic e2:\n')
+		score_board.write(f'i   Average evaluation time: {stats["e2t"]/r}s\n')
+		score_board.write(f'ii  Total heuristic evaluations: {stats["e2states"]/r}\n')
+		score_board.write(f'iii Evaluations by depth: {stats["e2statedepth"]}\n')
+		score_board.write(f'iv  Average evaluation depth: {stats["e2depth"]/r}\n')
+		score_board.write(f'v   Average recursion depth: {stats["e2ard"]/r}\n')
+		score_board.write(f'vi  Total moves: {stats["moves"]}\n\n')
+		stats = {'b': 0, 'w': 0, '.': 0, 'e1t': 0, 'e2t': 0, 'e1states': 0, 'e2states': 0, 'e1statedepth': {}, 'e2statedepth': {}, 'e1depth': 0, 'e2depth': 0, 'e1ard': 0, 'e2ard': 0}
+	score_board.close()
+
+def experiments():
+	game_tests(n=4, b=4, s=3, t=5, blocs=[(0,0),(0,3),(3,0),(3,3)], d1=6, d2=6, a1=False, a2=False)
+	game_tests(n=4, b=4, s=3, t=1, blocs=[(0,0),(0,3),(3,0),(3,3)], d1=6, d2=6, a1=True, a2=True)
+	game_tests(n=5, b=4, s=4, t=1, blocs=[(0,1),(2,4),(4,3),(3,3)], d1=2, d2=6, a1=True, a2=True)
+	game_tests(n=5, b=4, s=4, t=5, blocs=[(1,0),(3,4),(4,0),(2,3)], d1=6, d2=6, a1=True, a2=True)
+	game_tests(n=8, b=5, s=5, t=1, blocs=[(0,0),(0,4),(5,5),(4,4),(6,7)], d1=2, d2=6, a1=True, a2=True)
+	game_tests(n=8, b=5, s=5, t=5, blocs=[(0,0),(0,4),(5,5),(4,4),(6,7)], d1=2, d2=6, a1=True, a2=True)
+	game_tests(n=8, b=6, s=5, t=1, blocs=[(0,0),(0,4),(5,5),(4,4),(6,7),(1,2)], d1=6, d2=6, a1=True, a2=True)
+	game_tests(n=8, b=6, s=5, t=5, blocs=[(0,0),(0,4),(5,5),(4,4),(6,7),(1,2)], d1=6, d2=6, a1=True, a2=True)
+	
+			
+
 def main():
 	# n, b, blocs, s, d1, d2, t, a, m = userInput()
-	g = Game(recommend=True)
-	a1 = True
-	a2 = True
-	m = 'AI-AI'
-	m = m.split('-')
-	p1_h = "e2"
-	p2_h = "e2"
-	g.play(p1_algo=a1, p2_algo=a2, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
-
-	# # Score board file
-	# r = 10
-	# n = 5 
-	# b = 1
-	# s = 4
-	# t = 6
-	# d1 = 6
-	# d2 = 6
+	# g = Game(recommend=True)
 	# a1 = True
 	# a2 = True
-	# score_board = open(f'scoreboard.txt', 'a')
-	# for _ in range(r):
-	# 	#play
-	# 	print('hi')
-	# score_board.write(f'n={n} b={b} s={s} t={t}\n\n')
-	# score_board.write(f'Player 1: d={d1} a={a1}\n')
-	# score_board.write(f'Player 1: d={d2} a={a2}\n')
+	# m = 'H-AI'
+	# m = m.split('-')
+	# p1_h = "e2"
+	# p2_h = "e2"
+	# g.play(p1_algo=a1, p2_algo=a2, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
+	experiments()
 	
-
-
 if __name__ == "__main__":
 	main()
