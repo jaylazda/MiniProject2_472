@@ -31,6 +31,8 @@ class Game:
 		self.depth_state_count = {}
 		self.e1_game_depth_state_count = {}
 		self.e2_game_depth_state_count = {}
+		self.e1_ard_list = []
+		self.e2_ard_list = []
 		# Initialize the state count dictionaries
 		for i in range(max(d1, d2)):
 			self.depth_state_count[i+1] = 0
@@ -161,11 +163,13 @@ class Game:
 		y = None
 		result = self.is_end()
 		if result == 'b':
-			return (-10000, x, y, level)
+			return (-10000, x, y, level, level)
 		elif result == 'w':
-			return (10000, x, y, level)
+			return (10000, x, y, level, level)
 		elif result == '.':
-			return (0, x, y, level)
+			return (0, x, y, level, level)
+		depth_list = []
+		ard = 0
 		for i in range(self.n):
 			for j in range(self.n):
 				if self.current_state[i][j] == '.':
@@ -177,10 +181,10 @@ class Game:
 								v = self.e1('w', level)
 							else:
 	 							v = self.e2(level)
-							self.depth_state_count[level] += 1
-							self.e1_game_depth_state_count[level] +=1
+							depth_list.append(level)
 						else: # Traverse to the next level
-							(v, _, _, _) = self.minimax(max=False, level=level+1)
+							(v, _, _, _, child_ard) = self.minimax(max=False, level=level+1)
+							depth_list.append(child_ard)
 						if v > value:
 							value = v
 							x = i
@@ -192,14 +196,17 @@ class Game:
 								v = self.e1('b', level)
 							else:
 	 							v = self.e2(level)
+							depth_list.append(level)
 						else: # Traverse to the next level
-							(v, _, _, _) = self.minimax(max=True, level=level+1)
+							(v, _, _, _, child_ard) = self.minimax(max=True, level=level+1)
+							depth_list.append(child_ard)
 						if v < value:
 							value = v
 							x = i
 							y = j
 					self.current_state[i][j] = '.'
-		return (value, x, y, level)
+		ard = sum(depth_list) / len(depth_list)
+		return (value, x, y, level, ard)
 
 	def alphabeta(self, alpha=-2, beta=2, max=False, level=1):
 		# Minimizing for 'b' and maximizing for 'w'
@@ -215,11 +222,13 @@ class Game:
 		y = None
 		result = self.is_end()
 		if result == 'b':
-			return (-10000, x, y, level)
+			return (-10000, x, y, level, level)
 		elif result == 'w':
-			return (10000, x, y, level)
+			return (10000, x, y, level, level)
 		elif result == '.':
-			return (0, x, y, level)
+			return (0, x, y, level, level)
+		depth_list = []
+		ard = 0
 		for i in range(self.n):
 			for j in range(self.n):
 				if self.current_state[i][j] == '.':
@@ -231,8 +240,10 @@ class Game:
 								v = self.e1('w', level)
 							else:
 	 							v = self.e2(level)
+							depth_list.append(level)
 						else: # Traverse to the next level
-							(v, _, _, depth) = self.alphabeta(alpha, beta, max=False, level=level+1)
+							(v, _, _, _, child_ard) = self.alphabeta(alpha, beta, max=False, level=level+1)
+							depth_list.append(child_ard)
 						if v > value:
 							value = v
 							x = i
@@ -244,24 +255,30 @@ class Game:
 								v = self.e1('b',level)
 							else:
 	 							v = self.e2(level)
+							depth_list.append(level)
 						else: # Traverse to the next level
-							(v, _, _, depth) = self.alphabeta(alpha, beta, max=True, level=level+1)
+							(v, _, _, _, child_ard) = self.alphabeta(alpha, beta, max=True, level=level+1)
+							depth_list.append(child_ard)
 						if v < value:
 							value = v
 							x = i
 							y = j
 					self.current_state[i][j] = '.'
+
 					if max: 
 						if value >= beta:
-							return (value, x, y, level)
+							ard = sum(depth_list) / len(depth_list)
+							return (value, x, y, level, ard)
 						if value > alpha:
 							alpha = value
 					else:
 						if value <= alpha:
-							return (value, x, y, level)
+							ard = sum(depth_list) / len(depth_list)
+							return (value, x, y, level, ard)
 						if value < beta:
 							beta = value
-		return (value, x, y, level)
+		ard = sum(depth_list) / len(depth_list)
+		return (value, x, y, level, ard)
 
 	# Basic heuristic
 	# Counts the number of b's, w's and x's in each row
@@ -338,43 +355,47 @@ class Game:
 		return cols, diags
 
 
-	def play(self,algo=None,player_b=None,player_w=None,p1_heuristic="e1",p2_heuristic="e1"):
-		if algo == None:
-			algo = self.ALPHABETA
+	def play(self,p1_algo=None,p2_algo=None,player_b=None,player_w=None,p1_heuristic="e1",p2_heuristic="e1"):
+		if p1_algo == None:
+			p1_algo = self.ALPHABETA
+		if p2_algo == None:
+			p2_algo = self.ALPHABETA
 		if player_b == None:
 			player_b = self.HUMAN
 		if player_w == None:
 			player_w = self.HUMAN
-		self.logger.write(f'Player 1: {player_b} d={self.d1} a={algo} e1\n')
-		self.logger.write(f'Player 2: {player_w} d={self.d2} a={algo} e1\n\n')
+		self.logger.write(f'Player 1: {player_b} d={self.d1} a={p1_algo} e1\n')
+		self.logger.write(f'Player 2: {player_w} d={self.d2} a={p2_algo} e1\n\n')
 		while True:
 			self.draw_board()
 			self.total_moves += 1
 			self.state_count = 0
+			ard = 0
 			self.depth_state_count = dict.fromkeys(self.depth_state_count, 0)
 			if self.check_end():
 				break
 			self.start_time = time.time()
-			if algo == self.MINIMAX:
-				if self.player_turn == 'b':
-					self.max_depth = self.d1
-					self.heuristic = p1_heuristic
-					(h, x, y, _) = self.minimax(max=False)
-				else:
-					self.max_depth = self.d2
-					self.heuristic = p2_heuristic
-					(h, x, y, _) = self.minimax(max=True)
-
-			else: # algo == self.ALPHABETA
-				if self.player_turn == 'b':
-					self.max_depth = self.d1
-					self.heuristic = p1_heuristic
-					(m, x, y, _) = self.alphabeta(max=False)
-				else:
-					self.max_depth = self.d2
-					self.heuristic = p2_heuristic
-					(m, x, y, _) = self.alphabeta(max=True)
+			if self.player_turn == 'b' and p1_algo == self.MINIMAX:
+				self.max_depth = self.d1
+				self.heuristic = p1_heuristic
+				(h, x, y, _, ard) = self.minimax(max=False)
+			elif self.player_turn == 'w' and p2_algo == self.MINIMAX:
+				self.max_depth = self.d2
+				self.heuristic = p2_heuristic
+				(h, x, y, _, ard) = self.minimax(max=True)
+			elif self.player_turn == 'b' and p1_algo == self.ALPHABETA:
+				self.max_depth = self.d1
+				self.heuristic = p1_heuristic
+				(m, x, y, _, ard) = self.alphabeta(max=False)
+			elif self.player_turn == 'w' and p2_algo == self.ALPHABETA:
+				self.max_depth = self.d2
+				self.heuristic = p2_heuristic
+				(m, x, y, _, ard) = self.alphabeta(max=True)	
 			end = time.time()
+			if self.heuristic == 'e1':
+				self.e1_ard_list.append(ard)
+			else:
+				self.e2_ard_list.append(ard)
 			if (self.player_turn == 'b' and player_b == self.HUMAN) or (self.player_turn == 'w' and player_w == self.HUMAN):
 				if self.recommend:
 					print(F'Evaluation time: {round(end - self.start_time, 7)}s')
@@ -393,7 +414,7 @@ class Game:
 				total += level*self.depth_state_count[level]
 			avg_depth = round(total/self.state_count, 4)
 			self.logger.write(f'iv  Average evaluation depth: {avg_depth}\n')
-			self.logger.write(f'v   Average recursion depth: \n')
+			self.logger.write(f'v   Average recursion depth: {ard}\n')
 			if self.heuristic == "e1":
 				self.e1_heuristic_eval_times.append(round(end - self.start_time, 7))
 			else:
@@ -401,6 +422,14 @@ class Game:
 			self.current_state[x][y] = self.player_turn
 			self.switch_player()
 		# End of game logging
+		e1_h_avg = 0
+		e2_h_avg = 0
+		e1_avg_depth = 0
+		e2_avg_depth = 0
+		if len(self.e1_heuristic_eval_times) > 0:
+		 e1_h_avg = round(sum(self.e1_heuristic_eval_times)/len(self.e1_heuristic_eval_times), 7)
+		if len(self.e2_heuristic_eval_times) > 0:
+			e2_h_avg = round(sum(self.e2_heuristic_eval_times)/len(self.e2_heuristic_eval_times), 7)
 		e1_total = 0
 		if self.e1_game_state_count > 0:
 			for level in self.e1_game_depth_state_count:
@@ -411,39 +440,45 @@ class Game:
 			for level in self.e2_game_depth_state_count:
 				e2_total += level*self.e2_game_depth_state_count[level]
 			e2_avg_depth = round(e2_total/self.e2_game_state_count, 4)
+		e1_ard = 0
+		e2_ard = 0
+		if len(self.e1_ard_list) > 0:
+			e1_ard = sum(self.e1_ard_list) / len(self.e1_ard_list)
+		if len(self.e2_ard_list) > 0:
+			e2_ard = sum(self.e2_ard_list) / len(self.e2_ard_list)
 		if p1_heuristic != p2_heuristic:
 			self.logger.write(f'Heuristic e1:\n')
-			self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e1_heuristic_eval_times)/len(self.e1_heuristic_eval_times), 7)}s\n')
+			self.logger.write(f'6(b)i   Average evaluation time: {e1_h_avg}s\n')
 			self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e1_game_state_count}\n')
 			self.logger.write(f'6(b)iii Evaluations by depth: {self.e1_game_depth_state_count}\n')
 			self.logger.write(f'6(b)iv  Average evaluation depth: {e1_avg_depth}\n')
-			self.logger.write(f'6(b)v   Average recursion depth: \n')
+			self.logger.write(f'6(b)v   Average recursion depth: {e1_ard}\n')
 			self.logger.write(f'Heuristic e2:\n')
-			self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e2_heuristic_eval_times)/len(self.e2_heuristic_eval_times), 7)}s\n')
+			self.logger.write(f'6(b)i   Average evaluation time: {e2_h_avg}s\n')
 			self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e2_game_state_count}\n')
 			self.logger.write(f'6(b)iii Evaluations by depth: {self.e2_game_depth_state_count}\n')
 			self.logger.write(f'6(b)iv  Average evaluation depth: {e2_avg_depth}\n')
-			self.logger.write(f'6(b)v   Average recursion depth: \n')
+			self.logger.write(f'6(b)v   Average recursion depth: {e2_ard}\n')
 			self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 		else:
 			if p1_heuristic == "e1":
 				self.logger.write(f'Heuristic e1:\n')
-				self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e1_heuristic_eval_times)/len(self.e1_heuristic_eval_times), 7)}s\n')
+				self.logger.write(f'6(b)i   Average evaluation time: {e1_h_avg}s\n')
 				self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e1_game_state_count}\n')
 				self.logger.write(f'6(b)iii Evaluations by depth: {self.e1_game_depth_state_count}\n')
 				self.logger.write(f'6(b)iv  Average evaluation depth: {e1_avg_depth}\n')
-				self.logger.write(f'6(b)v   Average recursion depth: \n')
+				self.logger.write(f'6(b)v   Average recursion depth: {e1_ard}\n')
 				self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 			else:
 				self.logger.write(f'Heuristic e2:\n')
-				self.logger.write(f'6(b)i   Average evaluation time: {round(sum(self.e2_heuristic_eval_times)/len(self.e2_heuristic_eval_times), 7)}s\n')
+				self.logger.write(f'6(b)i   Average evaluation time: {e2_h_avg}s\n')
 				self.logger.write(f'6(b)ii  Total heuristic evaluations: {self.e2_game_state_count}\n')
 				self.logger.write(f'6(b)iii Evaluations by depth: {self.e2_game_depth_state_count}\n')
 				self.logger.write(f'6(b)iv  Average evaluation depth: {e2_avg_depth}\n')
-				self.logger.write(f'6(b)v   Average recursion depth: \n')
+				self.logger.write(f'6(b)v   Average recursion depth: {e2_ard}\n')
 				self.logger.write(f'6(b)vi  Total moves: {self.total_moves}\n')
 		self.logger.close()
-		return
+		return (self.result, e1_h_avg, e2_h_avg, self.e1_game_state_count, self.e2_game_state_count, self.e1_game_depth_state_count, self.e2_game_depth_state_count, e1_avg_depth, e2_avg_depth)
 
 def userInput():
     while True:
@@ -497,12 +532,31 @@ def userInput():
 def main():
 	# n, b, blocs, s, d1, d2, t, a, m = userInput()
 	g = Game(recommend=True)
-	a = True
+	a1 = True
+	a2 = True
 	m = 'AI-AI'
 	m = m.split('-')
 	p1_h = "e2"
 	p2_h = "e2"
-	g.play(algo=a, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
+	g.play(p1_algo=a1, p2_algo=a2, player_b=m[0], player_w=m[1], p1_heuristic=p1_h, p2_heuristic=p2_h)
+
+	# # Score board file
+	# r = 10
+	# n = 5 
+	# b = 1
+	# s = 4
+	# t = 6
+	# d1 = 6
+	# d2 = 6
+	# a1 = True
+	# a2 = True
+	# score_board = open(f'scoreboard.txt', 'a')
+	# for _ in range(r):
+	# 	#play
+	# 	print('hi')
+	# score_board.write(f'n={n} b={b} s={s} t={t}\n\n')
+	# score_board.write(f'Player 1: d={d1} a={a1}\n')
+	# score_board.write(f'Player 1: d={d2} a={a2}\n')
 	
 
 
