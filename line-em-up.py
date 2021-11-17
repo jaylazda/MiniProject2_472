@@ -246,7 +246,7 @@ class Game:
 							y = j
 					else:
 						self.current_state[i][j] = 'b'
-						if level == self.d1 or time_elapsed >= self.t-0.002: # We are at the max depth or time is up, so evaluate the heuristic
+						if level == self.max_depth or time_elapsed >= self.t-0.002: # We are at the max depth or time is up, so evaluate the heuristic
 							if self.heuristic == "e1":
 								v = self.e1('b',level)
 							else:
@@ -360,8 +360,8 @@ class Game:
 			player_b = self.HUMAN
 		if player_w == None:
 			player_w = self.HUMAN
-		self.logger.write(f'Player 1: {player_b} d={self.d1} a={p1_algo} e1\n')
-		self.logger.write(f'Player 2: {player_w} d={self.d2} a={p2_algo} e1\n\n')
+		self.logger.write(f'Player 1: {player_b} d={self.d1} a={p1_algo} {p1_heuristic}\n')
+		self.logger.write(f'Player 2: {player_w} d={self.d2} a={p2_algo} {p2_heuristic}\n\n')
 		while True:
 			self.draw_board()
 			self.total_moves += 1
